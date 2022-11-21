@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
            PostalNumber postalNumber = new PostalNumber();
-            postalNumber.ValidatePinCode("A41531");
+            postalNumber.ValidatePinCode("41531Z");
         }
     }
 }
