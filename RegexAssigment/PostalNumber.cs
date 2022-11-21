@@ -9,10 +9,18 @@ namespace RegexAssigment
 {
     public class PostalNumber
     {
-        public static string REGIX_PINCODE = "^[1-9][0-9]{5}$";
-        public bool validatePinCode(string pincode)
+        public void ValidatePinCode(string pincode)
         {
-            return Regex.IsMatch(pincode, REGIX_PINCODE);
+            var ragex = new Regex("^[1-9][0-9]{5}$");
+            bool matchRes = ragex.IsMatch(pincode);
+            if (matchRes == true)
+            {
+                Console.WriteLine($"\n{pincode} Matches the PinCode");
+            }
+            else
+            {
+                Console.WriteLine($"\n{pincode} does not matches the PinCode");
+            }
         }
     }
 }
